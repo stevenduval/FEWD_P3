@@ -19,7 +19,7 @@
             <p>Get the latest news on how your code is doing right in your inbox</p>
         </section>
         <section id="signupForm">
-            <form>
+            <form action="index.html" method="POST">
                 <fieldset id="contact">
                     <legend>Contact Information</legend>
                     
@@ -38,7 +38,7 @@
                     <label for="city">City</label>
                     <input type="text" id="city" name="user_city">
 
-                    <label>State</label>
+                    <label for="state">State</label>
                     <select id="state" name="user_state">
                         <option selected="true" disabled="disabled">Choose State</option>
                         <option value="AL">Alabama</option>
@@ -95,7 +95,7 @@
                     </select>
 
                     <label for="zip">Zip Code</label>
-                    <input type="number" id="zip" name="user_zip">
+                    <input type="text" id="zip" name="user_zip">
                 </fieldset>
 
                 <fieldset id="newsletter">
@@ -107,8 +107,8 @@
                     <input type="checkbox" id="newsletter_js" value="newsletter_js" name="user_newsletter"><label for="newsletter_js">Javascript News</label>
 
                     <label>Newsletter format</label>
-                    <input type="checkbox" id="newsletter_format_html" value="newsletter_format_html" name="user_newsletter_format"><label for="newsletter_format_html">HTML</label>
-                    <input type="checkbox" id="newsletter_format_text" value="newsletter__format_text" name="user_newsletter_format"><label for="newsletter_format_text">Plain text</label>
+                    <input type="radio" id="newsletter_format_html" value="newsletter_format_html" name="user_newsletter_format"><label for="newsletter_format_html">HTML</label>
+                    <input type="radio" id="newsletter_format_text" value="newsletter__format_text" name="user_newsletter_format"><label for="newsletter_format_text">Plain text</label>
                 
                     <label for="topics">Other Topics you'd like to hear about</label>
                     <textarea id="topics" name="user_topics"></textarea>

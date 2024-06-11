@@ -22,7 +22,7 @@ header h2 {
 }
 
 main {
-    padding: 20px;
+    padding: 0 20px;
     max-width: 768px;
     width: 100%;
     margin: 0 auto;
@@ -50,9 +50,13 @@ main {
     margin-bottom: 40px;
 }
 
-#signupForm {
+#signupForm #contact legend,
+#signupForm #newsletter legend {
     margin-top: 2px;
     border-top: 2px solid #2D3945;
+    width: 100%;
+    text-align: left;
+    padding-top: 20px;
 }
 
 #signupForm #contact,
@@ -63,7 +67,7 @@ main {
     align-content: flex-start;
     align-items: center;
     padding: 0;
-    margin: 25px 0 0;
+    margin: 2px 0 0;
 }
 
 #signupForm #contact input,
@@ -72,14 +76,13 @@ main {
     flex: 0 100%;
 }
 
-
 #signupForm #zip {
     flex: 0 50%;
+    appearance: none;
 }
 
 #signupForm #contact legend,
 #signupForm #newsletter legend  {
-    padding: 0;
     margin-bottom: 20px;
     font-size: 18px;
     color: #2D3945;
@@ -93,7 +96,7 @@ main {
 #signupForm #contact label,
 #signupForm #newsletter label {
     color: #4E6174;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #signupForm #contact input,
@@ -102,13 +105,12 @@ main {
     padding: 15px;
     background: #EFF0F1;
     border: 0;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
-#signupForm #contact input:active,
-#signupForm #contact input:focus
-#signupForm #contact select:active,
-#signupForm #contact select:focus {
+#signupForm input:focus,
+#signupForm select:focus,
+#signupForm textarea:focus {
     outline-color: #46698B;  
 }
 
@@ -134,19 +136,54 @@ main {
 }
 
 #newsletter input + label[for] {
-    flex: 0 calc(100% - 17px);
+    flex: 0  0 calc(100% - 20px);
     padding-left: 10px;
     margin: unset;
 }
 
 #newsletter input {
-    flex: 0 13px;
-    margin-left: 0;
-    box-sizing: border-box;
+    flex: none;
+    height: 12px;
+    width: 12px;
+    min-width: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#newsletter textarea {
+    background: #EFF0F1;
+    border: 0;
+    border-radius: 3px;
+    width: 100%;
+    height: 100px;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px 0;
+    color: #FFFFFF;
+    background: #4EBBB5;
+    border-radius: 3px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
 
+footer p {
+    font-style: italic;
+    color: #B4B9BD;
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -161,7 +198,7 @@ main {
     }
 
 
-    #signupForm #zip {
+    #signupForm #contact #zip {
         flex: 0 25%;
     }
 }
