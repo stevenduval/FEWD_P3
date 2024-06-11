@@ -1,0 +1,167 @@
+* {
+    font-family: "Merriweather", serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #2D3945;
+    text-align: center;
+}
+
+header h2 {
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+main {
+    padding: 20px;
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#signupHeader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid #2D3945;
+}
+
+#signupHeader h1 {
+    color: #2D3945;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#signupHeader p {
+    color: #ACB1B5;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+#signupForm {
+    margin-top: 2px;
+    border-top: 2px solid #2D3945;
+}
+
+#signupForm #contact,
+#signupForm #newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    align-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 25px 0 0;
+}
+
+#signupForm #contact input,
+#signupForm #contact label,
+#signupForm #contact select {
+    flex: 0 100%;
+}
+
+
+#signupForm #zip {
+    flex: 0 50%;
+}
+
+#signupForm #contact legend,
+#signupForm #newsletter legend  {
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #2D3945;
+    font-weight: 700;
+}
+
+#signupForm #contact label {
+    margin-bottom: 10px;
+}
+
+#signupForm #contact label,
+#signupForm #newsletter label {
+    color: #4E6174;
+    font-size: 12px;
+}
+
+#signupForm #contact input,
+#signupForm #contact select {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #EFF0F1;
+    border: 0;
+    border-radius: 2px;
+}
+
+#signupForm #contact input:active,
+#signupForm #contact input:focus
+#signupForm #contact select:active,
+#signupForm #contact select:focus {
+    outline-color: #46698B;  
+}
+
+#signupForm #contact input::placeholder {
+    text-align: right;
+    font-style: italic;
+    color: #B4B9BD;
+}
+
+#signupForm #contact select option:disabled {
+    color: #B4B9BD;
+}
+
+#signupForm #newsletter {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#newsletter label {
+    flex: 0 100%;
+    margin: 15px 0;
+}
+
+#newsletter input + label[for] {
+    flex: 0 calc(100% - 17px);
+    padding-left: 10px;
+    margin: unset;
+}
+
+#newsletter input {
+    flex: 0 13px;
+    margin-left: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+    #signupForm #contact input,
+    #signupForm #contact select {
+        flex: 0 79%;
+    }
+
+
+    #signupForm #contact label {
+        flex: 0 20%;
+    }
+
+
+    #signupForm #zip {
+        flex: 0 25%;
+    }
+}
