@@ -8,8 +8,16 @@ body {
     padding: 0;
 }
 
-header {
+header, 
+#signupHeader,
+#signupForm #contact,
+#signupForm #newsletter,
+footer {
     display: flex;
+    flex-wrap: wrap;
+}
+
+header {
     flex-direction: row;
     justify-content: center;
     background: #2D3945;
@@ -19,19 +27,19 @@ header {
 header h2 {
     text-transform: uppercase;
     color: #FFF;
+    font-size: 20px;
 }
 
 main {
-    padding: 15px 20px 0;
+    padding: 15px 20px;
     max-width: 768px;
     width: 100%;
     margin: 0 auto;
+    background: #e1e1e1;
 }
 
 #signupHeader {
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     text-align: center;
     border-bottom: 4px solid #2D3945;
@@ -64,8 +72,6 @@ main {
 
 #signupForm #contact,
 #signupForm #newsletter {
-    display: flex;
-    flex-wrap: wrap;
     border: none;
     align-items: center;
     padding: 0;
@@ -170,7 +176,6 @@ button[type="submit"] {
 
 
 footer {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -185,10 +190,11 @@ footer p {
 
 @media only screen and (min-width: 768px) {
 
-    main {
-        padding-top: 40px;
+    #signupHeader h1 {
+      font-size: 24px;
     }
     
+    main,
     #signupForm #contact legend,
     #signupForm #newsletter legend {
        padding-top: 40px;
